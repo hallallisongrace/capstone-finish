@@ -140,7 +140,7 @@ import {BACKEND_URL} from './config';
    )
 }
 }
-export default  (Contact);
+export default contact;
 
 
 
