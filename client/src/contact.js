@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './contact.css';
 import {BACKEND_URL} from './config';
- class Contact extends Component {
+ class contact extends Component {
   constructor (props){
     super(props)
     this.onChangeName = this.onChangeName.bind(this);
