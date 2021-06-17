@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './contact.css';
 import {BACKEND_URL} from './config';
- class contact extends Component {
+ class Contact extends Component {
   constructor (props){
     super(props)
     this.onChangeName = this.onChangeName.bind(this);
@@ -64,7 +64,7 @@ import {BACKEND_URL} from './config';
     console.log(contact)
     axios.post(BACKEND_URL + 'contact/add', contact)
     .then(res=>console.log(res.data));
-    this.props.history.push('/home');
+    this.props.history.push('/');
     this.setState({
         name: '',
         email: '',
@@ -79,10 +79,10 @@ import {BACKEND_URL} from './config';
       <div>
       <div className="body3">
       <form id='contact-form' onSubmit={this.onSubmit}>
-      <div className="titlecontact">
-          {/* <h3 className='text-center'>Let's Chat!</h3>
-          <h4>Leave us a message below</h4> */}
-</div>
+    {/* <div className="titlecontact">
+   <h3 className='text-center'>Let's Chat!</h3>
+          <h4>Leave us a message below</h4>
+</div> */}
           <div className="containerContact">
           <div class="container">
   <div class="row header">
@@ -126,40 +126,18 @@ import {BACKEND_URL} from './config';
                required
                className='form-controls'
                value={this.state.phone}
-               onChange={this.onChangePhoneNumber}
-              />
+               onChange={this.onChangePhoneNumber}/>
     </div>
              <div className="form-group">
              <input type='submit' value="Sumbit" className="btn-add" />
             </div>
 </div>
-</div>            </div>
+</div>
+ </div>
           </form>
            </div>
             </div>
    )
 }
 }
-export default contact;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default Contact;
